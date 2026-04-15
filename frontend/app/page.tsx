@@ -8,18 +8,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useWallet } from '../lib/hooks';
-import { EnhancedAIChatButton } from '../components/EnhancedAIChatButton';
-import {
-  cricketDataService,
-  userProfileService,
-  leaderboardService,
-  nftTicketService,
-  academyService,
-  contextBuilder,
-  analyticsService,
-  abTestingService,
-  clearAllCache,
-} from '../lib/aiDataService';
 
 /**
  * Animated Counter Hook - Smoothly counts from 0 to final value
@@ -1304,9 +1292,6 @@ export default function HomePage(): React.ReactElement {
 
         {/* Footer */}
         <Footer />
-
-        {/* AI Chat Button - World-Class Chatbot */}
-        <EnhancedAIChatButton />
 
         {/* Impact Receipt Modal */}
         {receiptData && (
