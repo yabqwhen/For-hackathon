@@ -737,7 +737,7 @@ export default function ImpactPage(): React.ReactElement {
                         <PaymentButton
                           userAddress={user.address}
                           wireAmount={ethers.parseEther((selectedKit.price * 0.00006).toFixed(8))}
-                          purpose="charity_donation"
+                          purpose="donation"
                           label="Confirm & Donate"
                           size="md"
                           metadata={{
