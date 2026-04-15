@@ -100,8 +100,11 @@ export interface TicketPurchaseContextType {
   initiatePayment: (purchase: PurchaseDetails) => Promise<void>;
   executePayment: (userAddress: string, wireAmount: string) => Promise<string>;
   checkPaymentStatus: (txHash: string) => Promise<void>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   mintNFT: (txHash: string, metadata: any) => Promise<void>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   generateQRCode: (ticketData: any) => Promise<string>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   generateReceipt: (paymentData: any) => Promise<Receipt>;
   resetPurchase: () => void;
   setPaymentError: (error: string | null) => void;
@@ -297,6 +300,7 @@ export function TicketPurchaseProvider({ children }: { children: ReactNode }) {
   /**
    * Mint NFT ticket
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const mintNFT = useCallback(
     async (txHash: string, metadata: any) => {
       try {
@@ -344,6 +348,7 @@ export function TicketPurchaseProvider({ children }: { children: ReactNode }) {
   /**
    * Generate QR code
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const generateQRCode = useCallback(async (ticketData: any): Promise<string> => {
     try {
       const response = await fetch('/api/services/qr-code/generate', {
@@ -370,6 +375,7 @@ export function TicketPurchaseProvider({ children }: { children: ReactNode }) {
   /**
    * Generate receipt
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const generateReceipt = useCallback(async (paymentData: any): Promise<Receipt> => {
     try {
       const userEmail = localStorage.getItem('user_email') || '';
