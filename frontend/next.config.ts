@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  basePath: "/1111",
+  output: "export",
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -8,6 +10,9 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   swcMinify: false,
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
