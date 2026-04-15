@@ -26,7 +26,7 @@ export interface PaymentButtonProps {
   className?: string;
   disabled?: boolean;
   pkrAmount?: number;
-  metadata?: PaymentRequest['metadata'];
+  metadata?: any; // Accept any metadata
   onSuccess?: (txHash: string, blockNumber?: number) => void;
   onError?: (error: Error) => void;
   variant?: 'primary' | 'secondary' | 'outline';
