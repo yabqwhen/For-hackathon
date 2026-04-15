@@ -300,8 +300,8 @@ export function TicketPurchaseProvider({ children }: { children: ReactNode }) {
   /**
    * Mint NFT ticket
    */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const mintNFT = useCallback(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     async (txHash: string, metadata: any) => {
       try {
         setMintingStatus('pending');
